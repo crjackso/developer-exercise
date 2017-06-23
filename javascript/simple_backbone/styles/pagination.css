@@ -1,0 +1,37 @@
+.pagination {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+}
+
+.pagination .active a {
+    background-color: #337ab7;
+    color: #FFF;
+}
+
+.page-item:first-child .page-link {
+    border-bottom-left-radius: .25rem;
+    border-top-left-radius: .25rem;
+    margin-left: 0;
+}
+
+.page-item a {
+    text-decoration: none;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #0275d8;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}

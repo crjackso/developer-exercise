@@ -1,12 +1,75 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                    "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
+
 <head>
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
-</head>
-<body>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="styles/pagination.css" rel="stylesheet">
+  <link href="styles/tables.css" rel="stylesheet">
+  <link href="styles/app.css" rel="stylesheet">
+  <script id="quote-template" type="text/template">
+    <td>
+      <%= source %>
+    </td>
+    <td>
+      <%= quote %>
+    </td>
+    <td>
+      <%= context %>
+    </td>
+    <td>
+      <%= theme %>
+    </td>
+  </script>
+  <script id="search-form-template" type="text/template">
+    <form id='search-form'>
+      <input type="text" id="search-bar" placeholder="Enter search keyword">
+      <button type="submit">
+	       <i class="fa fa-search" aria-hidden="true"></i>
+	       Search
+	     </button>
+    </form>
+  </script>
+  <script id="page-item-template" type="text/template">
+    <a class="page-link" href="#">
+      <%= pageNumber %>
+    </a>
+  </script>
 
+  <script id="quote-list-template" type="text/template">
+    <div id="search-options"></div>
+    <table id="quotes" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th>Quote</th>
+          <th>Context</th>
+          <th>Theme</th>
+        </tr>
+      </thead>
+    </table>
+    <div id="paginator"></div>
+  </script>
+
+  <title></title>
+</head>
+
+<body>
+  <h1>Quotes</h1>
+  <div id="quotes-layout"></div>
+
+  <script src="scripts/index.js"></script>
+  <script src="scripts/base.js"></script>
+  <script src="scripts/quotes.js"></script>
+  <script src="scripts/filters.js"></script>
+  <script>
+    $(function () {
+      BenchPrep.init();
+    })
+  </script>
+  </script>
 </body>
+
 </html>
